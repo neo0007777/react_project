@@ -1,0 +1,144 @@
+.stock-analysis {
+  padding: 2rem;
+  min-height: 100vh;
+  background-color: #f8f9fa;
+}
+
+.analysis-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.analysis-container h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #1a1a1a;
+}
+
+.search-form {
+  display: flex;
+  gap: 1rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.search-form input {
+  flex: 1;
+  padding: 1rem;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.search-form button {
+  padding: 1rem 2rem;
+  background-color: #61dafb;
+  color: #1a1a1a;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.search-form button:hover {
+  background-color: #4fa8c7;
+}
+
+.analysis-results {
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.stock-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.price-info {
+  text-align: right;
+}
+
+.price {
+  font-size: 2rem;
+  font-weight: bold;
+  display: block;
+}
+
+.change {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.change.positive {
+  color: #28a745;
+}
+
+.change.negative {
+  color: #dc3545;
+}
+
+.recommendation {
+  margin-bottom: 2rem;
+  padding: 1rem;
+  background-color: #f8f9fa;
+  border-radius: 5px;
+}
+
+.recommendation h3 {
+  margin-bottom: 1rem;
+}
+
+.recommendation span {
+  font-weight: bold;
+}
+
+.recommendation span.buy {
+  color: #28a745;
+}
+
+.recommendation span.sell {
+  color: #dc3545;
+}
+
+.recommendation span.hold {
+  color: #ffc107;
+}
+
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+
+.metric-card {
+  background-color: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.metric-card h4 {
+  color: #666;
+  margin-bottom: 0.5rem;
+}
+
+.metric-card p {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #1a1a1a;
+}
+
+.analysis-message {
+  text-align: center;
+  margin-top: 2rem;
+  padding: 1rem;
+  background-color: #e9ecef;
+  border-radius: 5px;
+  color: #1a1a1a;
+  font-size: 1.1rem;
+} 
