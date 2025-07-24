@@ -40,9 +40,10 @@ const StockAlerts = () => {
             <input
               type="text"
               name="symbol"
-              placeholder="Stock Symbol (e.g., AAPL)"
+              placeholder="Stock Symbol (e.g., Bitcoin)"
               value={alertData.symbol}
-              onChange={(e) => handleChange({ target: { name: 'symbol', value: e.target.value.toUpperCase() } })}
+              onChange={handleChange}
+
               required
             />
           </div>

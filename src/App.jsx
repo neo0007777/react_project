@@ -7,25 +7,66 @@ import StockAnalysis from "./pages/StockAnalysis";
 import StockAlerts from "./pages/StockAlerts";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
+import Auth from "./pages/Auth";
+import { AuthProvider } from "./AuthContext";
+import ProtectedRoute from "./ProtectedRoute";
 import "./App.css";
 
 function App() {
   return (
-    <Router>
-      <div className="app">
-        <Navbar />
-        <main>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/analysis" element={<StockAnalysis />} />
-            <Route path="/alerts" element={<StockAlerts />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/contact" element={<Contact />} />
-          </Routes>
-        </main>
-        <Footer />
-      </div>
-    </Router>
+    <AuthProvider>
+      <Router>
+        <div className="app">
+          <Navbar />
+          <main>
+            <Routes>
+              <Route path="/auth" element={<Auth />} />
+              <Route
+                path="/"
+                element={
+                  <ProtectedRoute>
+                    <Home />
+                  </ProtectedRoute>
+                }
+              />
+              <Route
+                path="/analysis"
+                element={
+                  <ProtectedRoute>
+                    <StockAnalysis />
+                  </ProtectedRoute>
+                }
+              />
+              <Route
+                path="/alerts"
+                element={
+                  <ProtectedRoute>
+                    <StockAlerts />
+                  </ProtectedRoute>
+                }
+              />
+              <Route
+                path="/about"
+                element={
+                  <ProtectedRoute>
+                    <About />
+                  </ProtectedRoute>
+                }
+              />
+              <Route
+                path="/contact"
+                element={
+                  <ProtectedRoute>
+                    <Contact />
+                  </ProtectedRoute>
+                }
+              />
+            </Routes>
+          </main>
+          <Footer />
+        </div>
+      </Router>
+    </AuthProvider>
   );
 }
 
